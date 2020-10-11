@@ -1,0 +1,37 @@
+Other Operators: 
+sizeof operator: sizeof is a much used in the C/C++ programming language. 
+                 It is a compile time unary operator which can be used to compute the size of its operand.
+                 Basically, sizeof operator calculates the size of the variable. 
+				
+	printf("%lu\n", sizeof(char));   // O/p: 1
+    printf("%lu\n", sizeof(int));    // O/p: 4
+    printf("%lu\n", sizeof(float));  // O/p: 4
+    printf("%lu", sizeof(double));   // O/p: 8
+	
+	
+    int arr[] = { 1, 2, 3, 4, 7, 98, 0, 12, 35, 99, 14 }; 
+    printf("Number of elements:%lu ", sizeof(arr) / sizeof(arr[0]));   //O/P: Gives number of elements in array
+
+
+Comma Operator: The comma operator (represented by the token ,) is a binary operator that evaluates its first operand and discards the result, 
+                it then evaluates the second operand and returns this value (and type). The comma operator has the lowest precedence of any C operator. 
+                Comma acts as both operator and separator. 
+				
+/* comma as an operator */
+int i = (5, 10); /* 10 is assigned to i*/
+int j = (f1(), f2()); /* f1() is called (evaluated) first followed by f2().  
+                      The returned value of f2() is assigned to j */
+					  
+/* comma as a separator */
+int a = 1, b = 2; 
+void fun(x, y); 
+
+/* Comma acts as a separator here and doesn't enforce any sequence.  
+    Therefore, either f1() or f2() can be called first */
+void fun(f1(), f2()); 
+
+				
+Conditional Operator: Conditional operator is of the form Expression1 ? Expression2 : Expression3 . 
+Here, Expression1 is the condition to be evaluated. 
+If the condition(Expression1) is True then we will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then
+ we will execute and return the result of Expression3. We may replace the use of if..else statements by conditional operators. 
